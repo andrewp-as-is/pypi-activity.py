@@ -1,12 +1,7 @@
-from setuptools import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='pypi-activity',
-    version='2020.6.2',
-    install_requires=[
-        'setuptools',
-    ],
-    packages=[
-        'pypi_activity',
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
+    packages=setuptools.find_packages()
 )
